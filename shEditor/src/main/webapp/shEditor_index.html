@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="samhyun_editor.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<script type="text/javascript">
+$(function() {
+	var textArea = $("#test");
+	var shEditor = new SHEditor(textArea, "default");
+	console.log(shEditor.configOptions);
+// 	shEditor.configOptions()
+	shEditor.createEditor();
+	$("#getValueBtn").bind("click", function() {
+		var value = shEditor.shEditorGetValue();
+		console.log(value);
+	});
+
+// 	$("#selectBox").val("나").attr("selected", true);
+});
+</script>
+<style type="text/css">
+iframe {
+	display:block;
+    width:100%;
+    height:100%;
+    border: none; 
+}
+.editorDefaultPanel{
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to top, #eeeeee, #c8c8c8); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+.editorDefaultFooter{
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #eeeeee, #c8c8c8); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+</style>
+</head>
+<body>
+<input type="button" id="getValueBtn" value="결과값">
+<div style="width: 706px; margin: 50px;">
+	<textarea id="test">
+	</textarea>
+</div>
+<select id="selectBox">
+	<option>가</option>
+	<option>나</option>
+	<option>다</option>
+</select>
+</body>
+</html>

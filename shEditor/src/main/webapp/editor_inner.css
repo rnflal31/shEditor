@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+body {
+/*     word-break:break-all; */
+/* 	background-color: "+editerBackColor+"; */
+/* 	scrollbar-face-color:#DDDDDD; */
+/* 	scrollbar-highlight-color:#CCCCCC; */
+/* 	scrollbar-shadow-color:#CCCCCC; */
+/* 	scrollbar-3dlight-color:#F5F5F5; */
+/* 	scrollbar-darkshadow-color:#F5F5F5; */
+/* 	scrollbar-track-color:#F0F0F0; */
+/* 	scrollbar-arrow-color:#FFFFFF; */
+	cursor:text;
+	margin: 0;
+	padding: 0;		
+/* 	background-color: #111111; */
+}
