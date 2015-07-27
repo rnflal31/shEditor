@@ -8,15 +8,31 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 <script type="text/javascript">
+// var a = 1;
+// b = 2;
+// (function () { 
+//     c = 3; 
+// }());
+ 
+// delete a; 
+// delete b; 
+// delete c;
+ 
+// console.log(typeof a);        // number 출력
+// console.log(typeof b);        // undefined 출력
+// console.log(typeof c);        // undefined 출력
+
 $(function() {
 	var textArea = $("#test");
-	var shEditor = new SHEditor(textArea, "default");
-	console.log(shEditor.configOptions);
+// 	var shEditor = new SHEditor(textArea, "default");
+	var shEditor = textArea.onEditor();
+// 	console.log(shEditor.configOptions);
 // 	shEditor.configOptions()
 	shEditor.createEditor();
 	$("#getValueBtn").bind("click", function() {
 		var value = shEditor.shEditorGetValue();
 		console.log(value);
+		alert(value);
 	});
 
 // 	$("#selectBox").val("나").attr("selected", true);

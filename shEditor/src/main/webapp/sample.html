@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="shEditor_comp.js"></script>
+<script type="text/javascript" src="shEditor.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<script type="text/javascript">
+
+$(function() {
+	var textArea = $("#test");
+	var textArea2 = $("#test2");
+// 	var shEditor = new SHEditor(textArea, "default");
+	var shEditor = textArea.onEditor();
+	var shEditor2 = textArea2.onEditor();
+// 	console.log(shEditor.configOptions);
+// 	shEditor.configOptions()
+// 	shEditor.createEditor();
+// 	$("#getValueBtn").bind("click", function() {
+// 		var value = shEditor.shEditorGetValue();
+// 		console.log(value);
+// 		alert(value);
+// 	});
+
+// 	$("#selectBox").val("나").attr("selected", true);
+
+	$("#getValue").click(function() {
+		console.log($("#testDiv").html());
+	});
+});
+</script>
+<style type="text/css">
+.shEditor-container {
+    overflow: visible;
+    border: 1px solid #cccccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.shEditor {
+    position: relative;
+    width:100%;
+    min-height: 8em;
+    padding: 5px;
+    overflow: auto;
+/*     outline: none;  */
+/*     -ms-word-wrap: break-word; */
+/*     word-wrap: break-word; */
+}
+
+ul.dropdown-menu > li{
+	margin:5px;
+	border-bottom: 1px solid #aaaaaa;
+}
+
+.formatting-h1 {
+    display: block;
+    font-size: 2em;
+/*     margin-top: 0.67em; */
+/*     margin-bottom: 0.67em; */
+/*     margin-left: 0; */
+/*     margin-right: 0; */
+    font-weight: bold;
+}
+.formatting-h2 {
+    display: block;
+    font-size: 1.5em;
+/*     margin-top: 0.83em; */
+/*     margin-bottom: 0.83em; */
+/*     margin-left: 0; */
+/*     margin-right: 0; */
+    font-weight: bold;
+}
+.formatting-h3 {
+    display: block;
+    font-size: 1.17em;
+/*     margin-top: 1em; */
+/*     margin-bottom: 1em; */
+/*     margin-left: 0; */
+/*     margin-right: 0; */
+    font-weight: bold;
+}
+.formatting-h4 {
+    display: block;
+/*     margin-top: 1.33em; */
+/*     margin-bottom: 1.33em; */
+/*     margin-left: 0; */
+/*     margin-right: 0; */
+    font-weight: bold;
+}
+.formatting-h5 {
+    display: block;
+    font-size: .83em;
+/*     margin-top: 1.67em; */
+/*     margin-bottom: 1.67em; */
+/*     margin-left: 0; */
+/*     margin-right: 0; */
+    font-weight: bold;
+}
+.formatting-h6 {
+    display: block;
+    font-size: .67em;
+/*     margin-top: 2.33em; */
+/*     margin-bottom: 2.33em; */
+/*     margin-left: 0; */
+/*     margin-right: 0; */
+    font-weight: bold;
+}
+
+
+.toolbar-container {
+	width:100%;
+	border-bottom: 1px solid #cccccc;
+}
+
+.editorDefaultPanel{
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to top, #eeeeee, #c8c8c8); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+.editorDefaultFooter{
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #eeeeee, #c8c8c8); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+</style>
+</head>
+<body>
+<h1>하이</h1>
+<!-- <input type="button" id="getValueBtn" value="결과값"> -->
+<!-- <div style="width: 706px; margin: 50px;"> -->
+	<textarea id="test">
+	</textarea>
+	
+<h2>하이</h2>
+	<textarea id="test2">
+	</textarea>
+<!-- </div> -->
+<!-- <input type="button" value="get" id="getValue"> -->
+<!-- <div contenteditable="true" style="width: 706px; height: 500px; border: 1px solid #111111;" id="testDiv"> -->
+<!-- </div> -->
+
+<!-- <select id="selectBox"> -->
+<!-- 	<option>가</option> -->
+<!-- 	<option>나</option> -->
+<!-- 	<option>다</option> -->
+<!-- </select> -->
+
+<!-- <button type="button" class="btn btn-default btn-sm" aria-label="Justify Align"> -->
+<!-- <span class="glyphicon glyphicon-font" aria-hidden="true"></span>                -->
+<!-- </button>                                                                        -->
+
+</body>
+</html>

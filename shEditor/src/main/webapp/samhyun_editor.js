@@ -163,6 +163,11 @@ SHEditor.prototype.createEditor = function() {
 	this.editorFrame = $('.shEditorFrame');	
 };
 
+SHEditor.prototype.shEditorGetValue = function() {
+	return this.editorFrame.contents().find("body").html();
+}
+
+
 /**
  * iframe script 적용  
  */
